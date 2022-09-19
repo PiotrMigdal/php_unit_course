@@ -1,0 +1,9 @@
+version: "3"
+services:
+  web:
+    build:
+      context: ./Dockerfile
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app
+    working_dir: /app

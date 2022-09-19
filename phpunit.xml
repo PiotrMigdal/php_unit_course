@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- PHP Unit setting, from coloured commands output to directory name -->
+<phpunit bootstrap="vendor/autoload.php"
+         colors="true"
+         verbose="true"
+         stopOnFailure="false">
+    <testsuites>
+        <testsuite name="Test suite">
+            <!-- All tests from this directory will run -->
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
