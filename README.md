@@ -16,7 +16,8 @@
 <li>There are built in function to assert that test passed. You can even test if exception is thrown<</li>
 <li>Worth to return your value from method to make sure the test is passed before developing method (i.e. "return 50" if you expect this from test)</li>
 <li>You can use dataProviders:</li>
-```php
+```
+
     /**
      * @dataProvider urlIsNotValidCases
      * @param $url
