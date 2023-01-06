@@ -15,6 +15,31 @@
 <li>It is useful to add alias: alias phpunit="./vendor/bin/phpunit"</li>
 <li>There are built in function to assert that test passed. You can even test if exception is thrown<</li>
 <li>Worth to return your value from method to make sure the test is passed before developing method (i.e. "return 50" if you expect this from test)</li>
+<li>You can use dataProviders:</li>
+```
+    /**
+     * @dataProvider urlIsNotValidCases
+     * @param $url
+     * @return void
+     */
+    public function testUrlIsNotValid($url): void
+    {
+        $validator = new Validator($url);
+        $this->assertEquals('Url is not valid', $validator->vali());
+    }
+
+    /**
+     * @return array
+     */
+    public function urlIsNotValidCases(): array
+    {
+        return [
+            ['maps.googleapis.com?query=true'],
+            ['https://?query=true'],
+            ['']
+        ];
+    }
+```
 </ul>
 
 # Conclusions
